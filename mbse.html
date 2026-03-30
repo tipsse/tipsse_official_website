@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBSE 線上工具 | TIPSSE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mbse.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-blue.png" alt="TIPSSE" class="nav-logo-img" />
+      </a>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about"    data-i18n="nav.about">學會簡介</a></li>
+        <li><a href="index.html#groups"   data-i18n="nav.groups">專業分組</a></li>
+        <li><a href="index.html#projects" data-i18n="nav.projects">專案成果</a></li>
+        <li><a href="index.html#roadmap"  data-i18n="nav.roadmap">發展路徑</a></li>
+        <li><a href="index.html#events"   data-i18n="nav.events">近期活動</a></li>
+        <li><a href="mbse.html" class="nav-active" data-i18n="nav.mbse">MBSE 工具</a></li>
+        <li><a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="mbse-hero">
+    <div class="stars" id="stars"></div>
+    <div class="container">
+      <div class="mbse-hero-inner">
+        <div class="mbse-hero-text">
+          <span class="section-tag" data-i18n="mbse.hero.tag">線上工具</span>
+          <h1 data-i18n="mbse.hero.h1">MBSE 線上建模平台</h1>
+          <p data-i18n="mbse.hero.p">在瀏覽器中直接建立 SysML 系統模型。支援 BDD 圖形編輯、Cameo .mdzip 匯入、STPA 安全分析與需求追溯矩陣，無需安裝任何軟體。</p>
+          <div class="mbse-hero-actions">
+            <a href="#tool" class="btn btn-primary" data-i18n="mbse.hero.btn1">立即使用工具</a>
+            <a href="#what-is-mbse" class="btn btn-outline" data-i18n="mbse.hero.btn2">什麼是 MBSE？</a>
+          </div>
+        </div>
+        <div class="mbse-hero-diagram" aria-hidden="true">
+          <!-- Animated SysML BDD mock diagram -->
+          <div class="mock-diagram">
+            <div class="mock-node block n1"><span>«block»</span>Satellite System</div>
+            <div class="mock-node block n2"><span>«block»</span>Power Subsystem</div>
+            <div class="mock-node block n3"><span>«block»</span>ADCS</div>
+            <div class="mock-node req  n4"><span>«requirement»</span>Power ≥ 50W</div>
+            <div class="mock-node req  n5"><span>«requirement»</span>Pointing ≤ 0.1°</div>
+            <svg class="mock-edges" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="rgba(79,142,247,0.6)" />
+                </marker>
+                <marker id="diamond" markerWidth="10" markerHeight="8" refX="0" refY="4" orient="auto">
+                  <polygon points="5,0 10,4 5,8 0,4" fill="none" stroke="rgba(79,142,247,0.6)" stroke-width="1.5"/>
+                </marker>
+              </defs>
+              <line x1="160" y1="56"  x2="80"  y2="110" stroke="rgba(79,142,247,0.45)" stroke-width="1.5" marker-end="url(#diamond)" stroke-dasharray="0"/>
+              <line x1="160" y1="56"  x2="240" y2="110" stroke="rgba(79,142,247,0.45)" stroke-width="1.5" marker-end="url(#diamond)"/>
+              <line x1="80"  y1="148" x2="80"  y2="188" stroke="rgba(123,94,246,0.5)"  stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+              <line x1="240" y1="148" x2="240" y2="188" stroke="rgba(123,94,246,0.5)"  stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is MBSE -->
+  <section id="what-is-mbse">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="mbse.what.tag">概念介紹</span>
+        <h2 data-i18n="mbse.what.h2">什麼是 MBSE？</h2>
+        <p data-i18n="mbse.what.p">Model-Based Systems Engineering，以模型為核心的系統工程方法論</p>
+      </div>
+
+      <div class="mbse-def-grid">
+        <div class="mbse-def-main" data-animate>
+          <h3 data-i18n="mbse.def.h3">傳統 vs. 模型驅動</h3>
+          <div class="compare-table">
+            <div class="compare-col old">
+              <div class="compare-header" data-i18n="mbse.compare.old">傳統文件式工程</div>
+              <ul>
+                <li data-i18n="mbse.c1.old">📄 規格書、Word 文件散落各處</li>
+                <li data-i18n="mbse.c2.old">🔄 更新一份文件，其他未同步</li>
+                <li data-i18n="mbse.c3.old">❌ 需求與設計難以追溯</li>
+                <li data-i18n="mbse.c4.old">🗣️ 工程師各說各話，理解不同</li>
+              </ul>
+            </div>
+            <div class="compare-divider">→</div>
+            <div class="compare-col new">
+              <div class="compare-header accent" data-i18n="mbse.compare.new">MBSE 模型驅動</div>
+              <ul>
+                <li data-i18n="mbse.c1.new">🗂️ 單一模型為唯一真實來源（SSOT）</li>
+                <li data-i18n="mbse.c2.new">🔗 所有圖表自動同步更新</li>
+                <li data-i18n="mbse.c3.new">✅ 需求追溯矩陣一目了然</li>
+                <li data-i18n="mbse.c4.new">🤝 跨部門共享同一語義模型</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mbse-concepts" data-animate>
+          <div class="concept-card">
+            <div class="concept-icon">🧩</div>
+            <h4 data-i18n="mbse.sysml.h4">SysML</h4>
+            <p data-i18n="mbse.sysml.p">Systems Modeling Language，MBSE 的標準建模語言。以 UML 為基礎，新增 Block、Requirement、Activity 等系統工程專用圖型。</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">📊</div>
+            <h4 data-i18n="mbse.bdd.h4">BDD / IBD</h4>
+            <p data-i18n="mbse.bdd.p">Block Definition Diagram 定義系統架構與元件層級；Internal Block Diagram 描述內部連線與介面關係。</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">🔒</div>
+            <h4 data-i18n="mbse.stpa.h4">STPA 安全分析</h4>
+            <p data-i18n="mbse.stpa.p">Systems-Theoretic Process Analysis，從系統層級識別危害與不安全控制動作，廣泛用於航太與汽車安全驗證。</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">🗺️</div>
+            <h4 data-i18n="mbse.rtm.h4">需求追溯矩陣 RTM</h4>
+            <p data-i18n="mbse.rtm.p">Requirements Traceability Matrix，驗證每一條需求都對應到設計元素，確保無遺漏，是航太系統認證的必備文件。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why MBSE matters -->
+      <div class="mbse-why" data-animate>
+        <div class="why-text">
+          <h3 data-i18n="mbse.why.h3">為什麼學會採用 MBSE？</h3>
+          <p data-i18n="mbse.why.p1">TIPSSE 開發的衛星與火箭系統涉及結構、電力、通訊、姿態控制等多個子系統。傳統文件難以管理複雜的跨系統介面與需求追溯，MBSE 讓各分組在同一模型語境下協作，大幅降低溝通成本與設計錯誤。</p>
+          <p data-i18n="mbse.why.p2">我們以開源工具實現原本需要高價商業軟體（Cameo、Rhapsody）才能完成的工作，並讓學生也能直接在瀏覽器上學習與實踐系統工程。</p>
+        </div>
+        <div class="why-stack">
+          <div class="stack-label" data-i18n="mbse.why.stack">我們使用的技術棧</div>
+          <div class="stack-items">
+            <span>SysML 2.x</span>
+            <span>Cameo .mdzip</span>
+            <span>XMI 2.x</span>
+            <span>STPA Profile</span>
+            <span>React Flow</span>
+            <span>Dagre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="mbse.feat.tag">功能特色</span>
+        <h2 data-i18n="mbse.feat.h2">平台功能一覽</h2>
+        <p data-i18n="mbse.feat.p">開源、免安裝，直接在瀏覽器中使用完整的系統建模工具。</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card highlight" data-animate>
+          <div class="feature-icon">🖊️</div>
+          <h3 data-i18n="mbse.f1.h3">SysML 視覺化編輯器</h3>
+          <p data-i18n="mbse.f1.p">拖拉式介面建立 BDD / IBD 圖形。支援 Block、Requirement、Actor、ValueType 等節點，以及 Composition、Generalization、Satisfy 等七種連線類型。</p>
+          <ul class="feature-list">
+            <li data-i18n="mbse.f1.l1">左側 Palette 一鍵新增元素</li>
+            <li data-i18n="mbse.f1.l2">右側 Property Panel 即時編輯屬性</li>
+            <li data-i18n="mbse.f1.l3">多圖表分頁管理</li>
+            <li data-i18n="mbse.f1.l4">Undo / Redo（⌘Z）</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">📥</div>
+          <h3 data-i18n="mbse.f2.h3">Cameo / XMI 匯入</h3>
+          <p data-i18n="mbse.f2.p">直接匯入 Cameo .mdzip 壓縮檔或標準 XMI 2.x 檔案，自動解析並以 Dagre 階層排版顯示。</p>
+          <ul class="feature-list">
+            <li data-i18n="mbse.f2.l1">支援 .mdzip / .xml / .xmi</li>
+            <li data-i18n="mbse.f2.l2">相容 Cameo 19SP3 ～ 2024RF2</li>
+            <li data-i18n="mbse.f2.l3">Sparx EA、Rhapsody 匯出格式</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">🛡️</div>
+          <h3 data-i18n="mbse.f3.h3">STPA 安全分析</h3>
+          <p data-i18n="mbse.f3.p">支援 DLR-FT ModelBasedSTPA Profile，完整呈現 Loss、Hazard、ControlStructure、UnsafeControlAction 等分析元素。</p>
+          <ul class="feature-list">
+            <li data-i18n="mbse.f3.l1">Loss / Hazard / SystemConstraint</li>
+            <li data-i18n="mbse.f3.l2">ControlAction / UnsafeControlAction</li>
+            <li data-i18n="mbse.f3.l3">LossScenario / SafetyConstraint</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">🗺️</div>
+          <h3 data-i18n="mbse.f4.h3">需求追溯矩陣 RTM</h3>
+          <p data-i18n="mbse.f4.p">一鍵開啟 RTM 面板，以矩陣呈現需求與設計元素的 Satisfy / Derive / Realize 覆蓋關係，含覆蓋率統計。</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">🔍</div>
+          <h3 data-i18n="mbse.f5.h3">全域搜尋</h3>
+          <p data-i18n="mbse.f5.p">⌘K 快速開啟搜尋面板，即時模糊比對元素名稱、種類、reqId，點擊即跳轉至對應圖表並選取。</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">📊</div>
+          <h3 data-i18n="mbse.f6.h3">模型品質指標</h3>
+          <p data-i18n="mbse.f6.p">自動偵測未連線元素、空需求文字、缺少追溯關係等品質問題，協助提升模型完整度。</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">📤</div>
+          <h3 data-i18n="mbse.f7.h3">XMI 匯出</h3>
+          <p data-i18n="mbse.f7.p">匯出含完整 SysML stereotype 的標準 XMI，可直接匯入回 Cameo，實現雙向互通。</p>
+        </div>
+
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">💾</div>
+          <h3 data-i18n="mbse.f8.h3">自動儲存</h3>
+          <p data-i18n="mbse.f8.p">即時存入 localStorage，重新整理也不遺失。⌘S 快速儲存，Save As 另存為本地檔案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool Embed / Launch -->
+  <section id="tool">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="mbse.tool.tag">立即使用</span>
+        <h2 data-i18n="mbse.tool.h2">開啟線上工具</h2>
+        <p data-i18n="mbse.tool.p">無需帳號，無需安裝，開啟即用。內附衛星 ADCS 範例模型供快速體驗。</p>
+      </div>
+
+      <div class="tool-launch-card" data-animate>
+        <div class="tool-preview">
+          <!-- Mock editor UI preview -->
+          <div class="mock-editor">
+            <div class="mock-toolbar">
+              <div class="mock-toolbar-left">
+                <div class="mock-btn">Import</div>
+                <div class="mock-btn">Export</div>
+                <div class="mock-btn active">⊞ Layout</div>
+                <div class="mock-sep"></div>
+                <div class="mock-btn">☷ RTM</div>
+                <div class="mock-btn">🔍 Search</div>
+                <div class="mock-btn">📊 Quality</div>
+              </div>
+              <div class="mock-toolbar-right">
+                <div class="mock-tab active">BDD – Satellite</div>
+                <div class="mock-tab">IBD – ADCS</div>
+                <div class="mock-tab add">＋</div>
+              </div>
+            </div>
+            <div class="mock-body">
+              <div class="mock-palette">
+                <div class="mock-palette-title">Elements</div>
+                <div class="mock-palette-item block-item">Block</div>
+                <div class="mock-palette-item req-item">Requirement</div>
+                <div class="mock-palette-item actor-item">Actor</div>
+                <div class="mock-palette-item vt-item">ValueType</div>
+                <div class="mock-palette-title mt">Connections</div>
+                <div class="mock-palette-item">Composition</div>
+                <div class="mock-palette-item">Satisfy</div>
+                <div class="mock-palette-item">Generalization</div>
+              </div>
+              <div class="mock-canvas">
+                <div class="mock-canvas-node block-n cn1">
+                  <div class="cn-stereo">«block»</div>
+                  <div class="cn-name">Satellite System</div>
+                </div>
+                <div class="mock-canvas-node block-n cn2">
+                  <div class="cn-stereo">«block»</div>
+                  <div class="cn-name">ADCS</div>
+                </div>
+                <div class="mock-canvas-node req-n cn3">
+                  <div class="cn-stereo">«requirement»</div>
+                  <div class="cn-name">REQ-001</div>
+                  <div class="cn-sub">Pointing accuracy</div>
+                </div>
+                <svg class="canvas-svg" viewBox="0 0 500 340">
+                  <line x1="200" y1="90"  x2="130" y2="155" stroke="rgba(79,142,247,0.5)" stroke-width="1.5"/>
+                  <line x1="130" y1="195" x2="130" y2="245" stroke="rgba(123,94,246,0.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+                </svg>
+              </div>
+              <div class="mock-props">
+                <div class="mock-props-title">Properties</div>
+                <div class="mock-prop-row"><span>Name</span><span class="pv">ADCS</span></div>
+                <div class="mock-prop-row"><span>Stereotype</span><span class="pv accent">block</span></div>
+                <div class="mock-prop-row"><span>Description</span><span class="pv">Attitude Determination...</span></div>
+                <div class="mock-prop-row"><span>reqId</span><span class="pv dim">—</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-launch-info">
+          <h3 data-i18n="mbse.launch.h3">TIPSSE MBSE Platform</h3>
+          <p data-i18n="mbse.launch.p">基於 React Flow + SysML 的開源建模平台，適合學術研究、教學與小型任務規劃使用。</p>
+          <div class="launch-badges">
+            <span class="badge">Open Source</span>
+            <span class="badge">No Install</span>
+            <span class="badge">SysML 2.x</span>
+            <span class="badge">Cameo Compatible</span>
+          </div>
+          <div class="launch-actions">
+            <a href="https://github.com/tipsse/tipsse_mbse_software" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="mbse.launch.github">GitHub 原始碼</a>
+            <a href="#" class="btn btn-outline" data-i18n="mbse.launch.demo">查看範例模型</a>
+          </div>
+          <p class="launch-note" data-i18n="mbse.launch.note">自行部署：<code>pnpm install && pnpm dev</code>，開啟 <code>localhost:5173</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Started -->
+  <section id="getting-started">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="mbse.gs.tag">快速上手</span>
+        <h2 data-i18n="mbse.gs.h2">三步驟開始建模</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" data-animate>
+          <div class="step-num">01</div>
+          <h4 data-i18n="mbse.s1.h4">開啟工具或匯入模型</h4>
+          <p data-i18n="mbse.s1.p">直接在瀏覽器中建立新模型，或點擊 Import 匯入現有的 Cameo .mdzip 或 XMI 檔案。</p>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-num">02</div>
+          <h4 data-i18n="mbse.s2.h4">拖拉建立系統架構</h4>
+          <p data-i18n="mbse.s2.p">從左側 Palette 拖入 Block 和 Requirement，在畫布上連線定義系統層級架構與需求關係。</p>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-num">03</div>
+          <h4 data-i18n="mbse.s3.h4">驗證需求與匯出</h4>
+          <p data-i18n="mbse.s3.p">開啟 RTM 確認需求覆蓋率，用 Quality 面板偵測問題，最後匯出標準 XMI 與團隊共享或匯入 Cameo。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as main) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-blue.png" alt="TIPSSE" class="footer-logo-img" />
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about"    data-i18n="nav.about">學會簡介</a>
+          <a href="index.html#projects" data-i18n="nav.projects">專案成果</a>
+          <a href="index.html#roadmap"  data-i18n="nav.roadmap2">發展藍圖</a>
+          <a href="mbse.html"           data-i18n="nav.mbse">MBSE 工具</a>
+          <a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="mbse.js"></script>
+</body>
+</html>

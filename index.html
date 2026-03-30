@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIPSSE | 中華民國行星科學系統工程學會</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="logo-blue.png" alt="TIPSSE 中華民國行星科學系統工程學會" class="nav-logo-img" />
+      </a>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"    data-i18n="nav.about">關於學會</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">專案成果</a></li>
+        <li><a href="#roadmap"  data-i18n="nav.roadmap">發展藍圖</a></li>
+        <li><a href="mbse.html" data-i18n="nav.mbse">MBSE 工具</a></li>
+        <li><a href="#contact"  data-i18n="nav.contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="stars" id="stars"></div>
+    <div class="hero-content">
+      <img src="logo-blue.png" alt="TIPSSE" class="hero-logo-img" />
+      <h1 class="hero-title" data-i18n-html="hero.title">探索宇宙，<br />工程未來</h1>
+      <p class="hero-subtitle" data-i18n-html="hero.subtitle">致力於推動太空科學、行星研究與系統工程的跨領域整合，<br />連結台灣與國際的學術交流。</p>
+      <div class="hero-actions">
+        <a href="#about"   class="btn btn-primary" data-i18n="hero.btn1">了解我們</a>
+        <a href="#roadmap" class="btn btn-outline"  data-i18n="hero.btn2">查看藍圖</a>
+      </div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit orbit-1"><div class="planet p1"></div></div>
+      <div class="orbit orbit-2"><div class="planet p2"></div></div>
+      <div class="orbit orbit-3"><div class="planet p3"></div></div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="hero.scroll">滾動探索</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about.tag">關於學會</span>
+        <h2 data-i18n="about.h2">我們是誰</h2>
+        <p data-i18n="about.p">中華民國行星科學系統工程學會（TIPSSE）是依法設立之非營利社會組織，匯聚來自台灣各大學與國際機構的研究者，共同推進太空探索、行星科學與系統工程的前沿研究。</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card" data-animate>
+          <div class="about-icon">🎯</div>
+          <h3 data-i18n="about.mission.h3">使命</h3>
+          <p data-i18n="about.mission.p">促進太空科學、行星科學與系統工程領域的研究，並推動台灣與國際學術界之間的合作交流。</p>
+        </div>
+        <div class="about-card" data-animate>
+          <div class="about-icon">🌏</div>
+          <h3 data-i18n="about.vision.h3">願景</h3>
+          <p data-i18n="about.vision.p">成為亞太地區行星科學與系統工程最具影響力的學術組織，孕育下一世代的太空科技人才。</p>
+        </div>
+        <div class="about-card" data-animate>
+          <div class="about-icon">🤝</div>
+          <h3 data-i18n="about.values.h3">價值觀</h3>
+          <p data-i18n="about.values.p">開放協作、嚴謹研究、跨域整合，以及對宇宙探索永不止息的好奇心與熱情。</p>
+        </div>
+      </div>
+
+      <div class="about-story" data-animate>
+        <div class="story-text">
+          <h3 data-i18n="about.story.h3">我們的故事</h3>
+          <p data-i18n="about.story.p1">TIPSSE 由一群對太空充滿熱情的研究者與工程師共同創立，旨在填補台灣在行星科學與系統工程領域的研究空缺。學會自成立以來，積極參與國際研討會，主導多項衛星與火箭研發計畫，並持續透過 STEM 推廣教育，將太空夢想帶給更多台灣年輕學子。</p>
+          <p data-i18n="about.story.p2">從 SSsat-1 衛星原型到 RNX-71V 火箭發動機靜態測試，每一步都見證了台灣太空科技的成長與突破。</p>
+        </div>
+        <div class="story-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label" data-i18n="stat.groups">專業分組</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-label" data-i18n="stat.years">年以上歷史</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label" data-i18n="stat.intl">國際合作計畫</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100">0</span>
+            <span class="stat-label" data-i18n="stat.members">會員遍及全台</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Groups -->
+  <section id="groups">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="groups.tag">組織架構</span>
+        <h2 data-i18n="groups.h2">四大專業分組</h2>
+        <p data-i18n="groups.p">學會下設四個專業研究小組，各司其職，涵蓋系統工程、行星科學、STEM 教育及航太研發。</p>
+      </div>
+
+      <div class="groups-grid">
+        <div class="group-card" data-animate>
+          <div class="group-number">01</div>
+          <div class="group-icon">⚙️</div>
+          <h3 data-i18n="g1.h3">系統工程組</h3>
+          <p data-i18n="g1.p">負責統籌技術研發專案，整合各子系統設計，確保任務架構的可靠性與可行性。</p>
+          <ul class="group-tags">
+            <li data-i18n="g1.t1">系統架構</li>
+            <li data-i18n="g1.t2">技術整合</li>
+            <li data-i18n="g1.t3">品質管理</li>
+          </ul>
+        </div>
+        <div class="group-card" data-animate>
+          <div class="group-number">02</div>
+          <div class="group-icon">🪐</div>
+          <h3 data-i18n="g2.h3">行星科學暨國際合作組</h3>
+          <p data-i18n="g2.p">推動行星科學研究，並建立與國際學術機構的合作橋樑，促進跨國研究交流。</p>
+          <ul class="group-tags">
+            <li data-i18n="g2.t1">行星探測</li>
+            <li data-i18n="g2.t2">國際合作</li>
+            <li data-i18n="g2.t3">學術交流</li>
+          </ul>
+        </div>
+        <div class="group-card" data-animate>
+          <div class="group-number">03</div>
+          <div class="group-icon">🎓</div>
+          <h3 data-i18n="g3.h3">STEM 推廣組</h3>
+          <p data-i18n="g3.p">致力於太空科學教育推廣，透過工作坊、講座與活動，激發青少年對科技的興趣。</p>
+          <ul class="group-tags">
+            <li data-i18n="g3.t1">科普教育</li>
+            <li data-i18n="g3.t2">工作坊</li>
+            <li data-i18n="g3.t3">人才培育</li>
+          </ul>
+        </div>
+        <div class="group-card" data-animate>
+          <div class="group-number">04</div>
+          <div class="group-icon">🚀</div>
+          <h3 data-i18n="g4.h3">航太系統研發組</h3>
+          <p data-i18n="g4.p">專注於衛星、火箭及酬載系統的研發設計，從概念驗證到原型製作全程投入。</p>
+          <ul class="group-tags">
+            <li data-i18n="g4.t1">衛星研發</li>
+            <li data-i18n="g4.t2">火箭技術</li>
+            <li data-i18n="g4.t3">酬載系統</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="proj.tag">專案成果</span>
+        <h2 data-i18n="proj.h2">重要里程碑</h2>
+        <p data-i18n="proj.p">以下為學會近年來完成或進行中的重要研究與工程專案。</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card featured" data-animate>
+          <div class="project-badge" data-i18n="proj.badge">旗艦計畫</div>
+          <div class="project-icon">🛰️</div>
+          <h3 data-i18n="p1.h3">SSsat-1 衛星原型</h3>
+          <p data-i18n="p1.p">自主研發之小型衛星原型，驗證關鍵子系統技術，為未來正式任務奠定基礎。涵蓋結構、電力、通訊與姿態控制等系統整合。</p>
+          <div class="project-status active" data-i18n="status.active">進行中</div>
+        </div>
+        <div class="project-card" data-animate>
+          <div class="project-icon">🔥</div>
+          <h3 data-i18n="p2.h3">RNX-71V 火箭發動機</h3>
+          <p data-i18n="p2.p">完成 140mm 固態火箭發動機靜態點火測試，驗證推力特性與燃燒穩定性。</p>
+          <div class="project-status done" data-i18n="status.done">已完成</div>
+        </div>
+        <div class="project-card" data-animate>
+          <div class="project-icon">📡</div>
+          <h3 data-i18n="p3.h3">GNSS-R 酬載計畫</h3>
+          <p data-i18n="p3.p">2022 年 3 月啟動，利用 GPS 反射訊號進行地球遙測，探索海面高度與土壤濕度等應用。</p>
+          <div class="project-status active" data-i18n="status.active2">進行中</div>
+        </div>
+        <div class="project-card" data-animate>
+          <div class="project-icon">🌌</div>
+          <h3 data-i18n="p4.h3">星系研究計畫</h3>
+          <p data-i18n="p4.p">2022 年 5 月展開，結合觀測資料與模擬分析，研究星系結構演化與行星系統形成機制。</p>
+          <div class="project-status active" data-i18n="status.active3">進行中</div>
+        </div>
+        <div class="project-card" data-animate>
+          <div class="project-icon">🌍</div>
+          <h3 data-i18n="p5.h3">國際研討會參與</h3>
+          <p data-i18n="p5.p">2022 年 10 月代表台灣出席土耳其伊斯坦堡 PreMIC8 國際研討會，發表最新研究成果。</p>
+          <div class="project-status done" data-i18n="status.done2">已完成</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="rm.tag">發展藍圖</span>
+        <h2>Roadmap</h2>
+        <p data-i18n="rm.p">學會的短、中、長期發展目標，從技術研發到國際拓展，步步為營，邁向太空。</p>
+      </div>
+
+      <div class="roadmap-container">
+        <!-- Phase 1 -->
+        <div class="roadmap-phase" data-animate>
+          <div class="phase-marker">
+            <div class="phase-dot completed"></div>
+            <div class="phase-line"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <span class="phase-label">Phase 1</span>
+              <span class="phase-period">2019 – 2021</span>
+              <span class="phase-status completed-badge" data-i18n="badge.done">已達成</span>
+            </div>
+            <h3 data-i18n="ph1.h3">基礎建設與組織成立</h3>
+            <p data-i18n="ph1.p">完成學會正式立案、建立四大專業分組架構、招募核心研究團隊，並啟動第一批內部研究計畫。</p>
+            <ul class="phase-milestones">
+              <li class="done"        data-i18n="ph1.m1">✓ 學會依法正式立案</li>
+              <li class="done"        data-i18n="ph1.m2">✓ 四大分組架構建立</li>
+              <li class="done"        data-i18n="ph1.m3">✓ 核心會員招募完成</li>
+              <li class="done"        data-i18n="ph1.m4">✓ 內部研究計畫啟動</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="roadmap-phase" data-animate>
+          <div class="phase-marker">
+            <div class="phase-dot completed"></div>
+            <div class="phase-line"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <span class="phase-label">Phase 2</span>
+              <span class="phase-period">2022 – 2023</span>
+              <span class="phase-status completed-badge" data-i18n="badge.done2">已達成</span>
+            </div>
+            <h3 data-i18n="ph2.h3">技術驗證與國際接軌</h3>
+            <p data-i18n="ph2.p">完成關鍵技術原型測試，建立國際合作網絡，積極參與國際學術研討會，提升台灣太空科技能見度。</p>
+            <ul class="phase-milestones">
+              <li class="done" data-i18n="ph2.m1">✓ RNX-71V 火箭發動機靜態測試</li>
+              <li class="done" data-i18n="ph2.m2">✓ SSsat-1 子系統整合驗證</li>
+              <li class="done" data-i18n="ph2.m3">✓ GNSS-R 酬載計畫啟動</li>
+              <li class="done" data-i18n="ph2.m4">✓ 參與土耳其 PreMIC8 研討會</li>
+              <li class="done" data-i18n="ph2.m5">✓ 定期會員大會與理監事會制度化</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="roadmap-phase" data-animate>
+          <div class="phase-marker">
+            <div class="phase-dot current"></div>
+            <div class="phase-line"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <span class="phase-label">Phase 3</span>
+              <span class="phase-period">2024 – 2025</span>
+              <span class="phase-status current-badge" data-i18n="badge.current">進行中</span>
+            </div>
+            <h3 data-i18n="ph3.h3">能量積累與計畫深化</h3>
+            <p data-i18n="ph3.p">深化各項研究計畫、擴大 STEM 推廣觸角、強化與國際機構的合作協議，並建立更完善的會員培訓體系。</p>
+            <ul class="phase-milestones">
+              <li class="done"        data-i18n="ph3.m1">✓ STEM 工作坊系列課程</li>
+              <li class="done"        data-i18n="ph3.m2">✓ SSsat-1 原型整合測試</li>
+              <li class="in-progress" data-i18n="ph3.m3">◑ GNSS-R 資料分析與發表</li>
+              <li class="in-progress" data-i18n="ph3.m4">◑ 國際合作備忘錄簽署</li>
+              <li class="pending"     data-i18n="ph3.m5">○ 學會官方出版品發行</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="roadmap-phase" data-animate>
+          <div class="phase-marker">
+            <div class="phase-dot upcoming"></div>
+            <div class="phase-line"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <span class="phase-label">Phase 4</span>
+              <span class="phase-period">2026 – 2027</span>
+              <span class="phase-status upcoming-badge" data-i18n="badge.upcoming">規劃中</span>
+            </div>
+            <h3 data-i18n="ph4.h3">任務發射準備</h3>
+            <p data-i18n="ph4.p">完成 SSsat-1 完整飛行版本設計，取得發射資格認證，並籌備第一次任務發射，同時擴大學生參與計畫。</p>
+            <ul class="phase-milestones">
+              <li class="pending" data-i18n="ph4.m1">○ SSsat-1 飛行版本完成</li>
+              <li class="pending" data-i18n="ph4.m2">○ 發射資格驗證與認證</li>
+              <li class="pending" data-i18n="ph4.m3">○ 學生衛星競賽計畫</li>
+              <li class="pending" data-i18n="ph4.m4">○ 年度國際太空研討會主辦</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="roadmap-phase" data-animate>
+          <div class="phase-marker">
+            <div class="phase-dot upcoming"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <span class="phase-label">Phase 5</span>
+              <span class="phase-period">2028+</span>
+              <span class="phase-status future-badge" data-i18n="badge.future">長期目標</span>
+            </div>
+            <h3 data-i18n="ph5.h3">亞太領航、深空探索</h3>
+            <p data-i18n="ph5.p">成為亞太區行星科學與系統工程的標竿組織，主導多顆衛星任務，推動台灣深空探測計畫，並建立完整的太空人才培育生態系。</p>
+            <ul class="phase-milestones">
+              <li class="pending" data-i18n="ph5.m1">○ 多衛星任務部署</li>
+              <li class="pending" data-i18n="ph5.m2">○ 深空探測可行性研究</li>
+              <li class="pending" data-i18n="ph5.m3">○ 設立常設太空科學研究中心</li>
+              <li class="pending" data-i18n="ph5.m4">○ 亞太區學術聯盟召集</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="events.tag">近期動態</span>
+        <h2 data-i18n="events.h2">活動紀錄</h2>
+        <p data-i18n="events.p">學會定期舉辦會員聯誼、學術講座與工作坊，促進成員交流與學術成長。</p>
+      </div>
+
+      <div class="events-list">
+        <div class="event-item" data-animate>
+          <div class="event-date">
+            <span class="event-month" data-i18n="ev1.month">DEC</span>
+            <span class="event-year">2023</span>
+          </div>
+          <div class="event-body">
+            <h4 data-i18n="ev1.h4">台北會員聯誼活動</h4>
+            <p data-i18n="ev1.p">年度會員交流活動，促進成員互動，共同回顧年度成果與展望未來計畫。</p>
+            <span class="event-tag" data-i18n="ev1.tag">聯誼活動</span>
+          </div>
+        </div>
+        <div class="event-item" data-animate>
+          <div class="event-date">
+            <span class="event-month" data-i18n="ev2.month">DEC</span>
+            <span class="event-year">2023</span>
+          </div>
+          <div class="event-body">
+            <h4 data-i18n="ev2.h4">第○○屆理監事聯席會議</h4>
+            <p data-i18n="ev2.p">年度治理會議，審議學會重要議案、報告財務狀況，並規劃次年度工作方向。</p>
+            <span class="event-tag" data-i18n="ev2.tag">正式會議</span>
+          </div>
+        </div>
+        <div class="event-item" data-animate>
+          <div class="event-date">
+            <span class="event-month" data-i18n="ev3.month">JUL</span>
+            <span class="event-year">2023</span>
+          </div>
+          <div class="event-body">
+            <h4 data-i18n="ev3.h4">宜蘭夏季郊遊活動</h4>
+            <p data-i18n="ev3.p">學會會員夏季戶外聯誼，增進彼此情誼，凝聚學會向心力。</p>
+            <span class="event-tag" data-i18n="ev3.tag">聯誼活動</span>
+          </div>
+        </div>
+        <div class="event-item" data-animate>
+          <div class="event-date">
+            <span class="event-month" data-i18n="ev4.month">JUN</span>
+            <span class="event-year">2023</span>
+          </div>
+          <div class="event-body">
+            <h4 data-i18n="ev4.h4">會員大會暨理監事會</h4>
+            <p data-i18n="ev4.p">半年度全體會員大會，選舉學會幹部，審議重要提案，全體會員共同參與學會決策。</p>
+            <span class="event-tag" data-i18n="ev4.tag">正式會議</span>
+          </div>
+        </div>
+        <div class="event-item" data-animate>
+          <div class="event-date">
+            <span class="event-month" data-i18n="ev5.month">OCT</span>
+            <span class="event-year">2022</span>
+          </div>
+          <div class="event-body">
+            <h4 data-i18n="ev5.h4">PreMIC8 國際研討會（土耳其·伊斯坦堡）</h4>
+            <p data-i18n="ev5.p">代表台灣赴伊斯坦堡出席國際研討會，發表學會研究成果，拓展國際合作網絡。</p>
+            <span class="event-tag" data-i18n="ev5.tag">國際交流</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag" data-i18n="contact.tag">聯絡我們</span>
+        <h2 data-i18n="contact.h2">加入我們的行列</h2>
+        <p data-i18n="contact.p">無論你是研究者、工程師、學生，或是單純對太空充滿好奇，歡迎與我們聯繫。</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+          <h4 data-i18n="contact.web.h4">官方網站</h4>
+          <a href="https://tipsse.org" target="_blank" rel="noopener">tipsse.org</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">💼</div>
+          <h4>LinkedIn</h4>
+          <a href="#" target="_blank" rel="noopener" data-i18n="contact.li.a">TIPSSE LinkedIn</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📸</div>
+          <h4>Instagram</h4>
+          <a href="#" target="_blank" rel="noopener">@tipsse</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">👥</div>
+          <h4>Facebook</h4>
+          <a href="#" target="_blank" rel="noopener" data-i18n="contact.fb.a">TIPSSE 粉絲專頁</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-blue.png" alt="TIPSSE" class="footer-logo-img" />
+        </div>
+        <div class="footer-links">
+          <a href="#about"    data-i18n="nav.about">關於學會</a>
+          <a href="#projects" data-i18n="nav.projects">專案成果</a>
+          <a href="#roadmap"  data-i18n="nav.roadmap">發展藍圖</a>
+          <a href="mbse.html" data-i18n="nav.mbse">MBSE 工具</a>
+          <a href="#contact"  data-i18n="nav.contact">聯絡我們</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
