@@ -248,11 +248,11 @@ const ethnicity = [
   { zh: '白人（美籍、歐洲、俄羅斯等）', en: 'White / Caucasian (American, European, Russian)',   count: 485, color: '#4f8ef7' },
   { zh: '黑人 / 非裔美國人',            en: 'Black / African American',                          count:  26, color: '#8b5cf6' },
   { zh: '漢族（中華人民共和國籍）',               en: 'Han Chinese (PRC nationals)',                        count:  24, color: '#ef4444' },
-  { zh: '華裔（其他國籍）',             en: 'Chinese heritage (other nationalities)',              count:  21, color: '#f97316' },
+  { zh: '華裔（其他國籍）',             en: 'Chinese heritage (other nationalities)',              count:   6, color: '#f97316' },
   { zh: '東亞裔（日、韓等）',           en: 'East Asian – Japanese, Korean, etc.',                count:  18, color: '#f59e0b' },
   { zh: '拉丁裔 / 西班牙裔',            en: 'Hispanic / Latino',                                  count:  16, color: '#10b981' },
   { zh: '南亞裔',                        en: 'South Asian',                                        count:   5, color: '#06b6d4' },
-  { zh: '其他 / 混血',                   en: 'Other / Multiracial',                               count:  53, color: '#64748b' },
+  { zh: '其他 / 混血',                   en: 'Other / Multiracial',                               count:  68, color: '#64748b' },
 ];
 
 // ── Helpers ───────────────────────────────────────────
