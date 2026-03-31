@@ -42,6 +42,20 @@ body {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 3px; }
 
+/* ── SVG Icons ── */
+.about-icon svg,
+.group-icon svg,
+.project-icon svg,
+.contact-icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--accent);
+  display: block;
+}
+.about-icon, .group-icon, .project-icon, .contact-icon {
+  margin-bottom: 14px;
+}
+
 /* ── Typography ── */
 h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
