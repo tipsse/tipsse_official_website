@@ -135,17 +135,25 @@ section:nth-child(even) { background: var(--bg-2); }
   text-decoration: none;
 }
 .nav-logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
   transition: opacity var(--transition);
 }
 .nav-logo:hover .nav-logo-img { opacity: 0.75; }
 
 .hero-logo-img {
-  height: 60px;
+  height: 80px;
   width: auto;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   display: block;
+}
+
+.hero-tagline-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 28px;
+  opacity: 0.92;
 }
 .nav-links {
   display: flex;
