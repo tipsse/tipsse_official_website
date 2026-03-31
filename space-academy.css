@@ -6,7 +6,6 @@
 /* ── Nav override: tighter fit for this page ────────── */
 #navbar .nav-links      { gap: 14px; }
 #navbar .nav-links a    { font-size: 0.8rem; }
-#navbar .nav-logo-img   { height: 44px; width: 44px; }
 
 /* ── Hero ──────────────────────────────────────────── */
 .sa-hero {
