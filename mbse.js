@@ -7,7 +7,7 @@ const translations = {
   zh: {
     'nav.about': '學會簡介', 'nav.groups': '專業分組', 'nav.projects': '專案成果',
     'nav.roadmap': '發展路徑', 'nav.roadmap2': '發展藍圖',
-    'nav.events': '近期活動', 'nav.contact': '聯絡我們', 'nav.mbse': 'MBSE 工具',
+    'nav.events': '近期活動', 'nav.contact': '聯絡我們', 'nav.mbse': 'MBSE 工具', 'nav.academy': '太空學堂',
     'footer.copy': '© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.',
     // Hero
     'mbse.hero.tag':  '線上工具',
@@ -72,7 +72,7 @@ const translations = {
   en: {
     'nav.about': 'About', 'nav.groups': 'Groups', 'nav.projects': 'Projects',
     'nav.roadmap': 'Roadmap', 'nav.roadmap2': 'Roadmap',
-    'nav.events': 'Events', 'nav.contact': 'Contact', 'nav.mbse': 'MBSE Tool',
+    'nav.events': 'Events', 'nav.contact': 'Contact', 'nav.mbse': 'MBSE Tool', 'nav.academy': 'Space Academy',
     'footer.copy': '© 2024 Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.',
     // Hero
     'mbse.hero.tag':  'Online Tool',

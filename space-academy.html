@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>太空知識小學堂 | TIPSSE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="space-academy.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-blue.png" alt="TIPSSE" class="nav-logo-img" />
+      </a>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about"    data-i18n="nav.about">學會簡介</a></li>
+        <li><a href="index.html#projects" data-i18n="nav.projects">專案成果</a></li>
+        <li><a href="index.html#roadmap"  data-i18n="nav.roadmap">發展路徑</a></li>
+        <li><a href="mbse.html"           data-i18n="nav.mbse">MBSE 工具</a></li>
+        <li><a href="space-academy.html" class="nav-active" data-i18n="nav.academy">太空學堂</a></li>
+        <li><a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────── -->
+  <section class="sa-hero">
+    <div class="stars" id="stars"></div>
+    <div class="container">
+      <div class="sa-hero-inner">
+        <span class="section-tag" data-i18n="sa.hero.tag">知識科普</span>
+        <h1 data-i18n="sa.hero.h1">太空知識小學堂</h1>
+        <p class="sa-hero-sub" data-i18n="sa.hero.p">截至 2025 年，全球共有 648 人抵達 100 公里 Kármán 線以上的太空。<br />他們是誰？從事什麼職業？來自哪些國家？用數據告訴你答案。</p>
+        <div class="sa-hero-actions">
+          <a href="#overview"  class="btn btn-primary" data-i18n="sa.hero.btn1">探索數據</a>
+          <a href="#taiwan"    class="btn btn-outline"  data-i18n="sa.hero.btn2">台灣的連結</a>
+        </div>
+      </div>
+    </div>
+    <div class="sa-hero-orb" aria-hidden="true">
+      <div class="sa-orb sa-orb-1"></div>
+      <div class="sa-orb sa-orb-2"></div>
+      <div class="sa-orb sa-orb-3"></div>
+    </div>
+  </section>
+
+  <!-- ── Overview stats ────────────────────────────── -->
+  <section id="overview" class="sa-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.ov.tag">數字總覽</span>
+        <h2 data-i18n="sa.ov.h2">太空人全球統計</h2>
+        <p data-i18n="sa.ov.p">以 FAI 定義之 100 公里 Kármán 線為準，截至 2025 年 3 月。Virgin Galactic（飛行高度通常低於 100km）不計入本統計。</p>
+      </div>
+
+      <div class="sa-stat-grid">
+        <div class="sa-stat-card" style="--accent-c:#4f8ef7">
+          <div class="sa-stat-icon">🚀</div>
+          <div class="sa-stat-num" data-count="648">0</div>
+          <div class="sa-stat-label" data-i18n="sa.stat.total">累計太空人總數</div>
+        </div>
+        <div class="sa-stat-card" style="--accent-c:#7b5ef6">
+          <div class="sa-stat-icon">🏛️</div>
+          <div class="sa-stat-num" data-count="555">0</div>
+          <div class="sa-stat-label" data-i18n="sa.stat.gov">政府機構太空人</div>
+        </div>
+        <div class="sa-stat-card" style="--accent-c:#10b981">
+          <div class="sa-stat-icon">💼</div>
+          <div class="sa-stat-num" data-count="93">0</div>
+          <div class="sa-stat-label" data-i18n="sa.stat.com">商業 / 民間飛行</div>
+        </div>
+        <div class="sa-stat-card" style="--accent-c:#f59e0b">
+          <div class="sa-stat-icon">🌍</div>
+          <div class="sa-stat-num" data-count="47">0</div>
+          <div class="sa-stat-label" data-i18n="sa.stat.countries">代表國家數</div>
+        </div>
+      </div>
+
+      <!-- Gov vs Com split bar -->
+      <div class="sa-split-wrap">
+        <div class="sa-split-bar">
+          <div class="sa-split-seg gov" style="width:85.6%" data-i18n-title="sa.split.gov.title">
+            <span data-i18n="sa.split.gov">政府 555人 (85.6%)</span>
+          </div>
+          <div class="sa-split-seg com" style="width:14.4%">
+            <span data-i18n="sa.split.com">民間 93人 (14.4%)</span>
+          </div>
+        </div>
+        <div class="sa-split-legend">
+          <span><span class="sa-dot gov"></span><span data-i18n="sa.legend.gov">政府機構（NASA、Roscosmos、ESA、JAXA、CNSA 等）</span></span>
+          <span><span class="sa-dot com"></span><span data-i18n="sa.legend.com">商業 / 民間（SpaceX 私人任務、Blue Origin New Shepard 等）</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Occupation (Gov vs Com toggle) ────────────── -->
+  <section id="occupations" class="sa-section alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.occ.tag">職業分類</span>
+        <h2 data-i18n="sa.occ.h2">太空人的原始職業</h2>
+        <p data-i18n="sa.occ.p">以「進入太空前的主要職業背景」歸類，政府機構與商業民間分開呈現。</p>
+      </div>
+      <div class="sa-tab-row">
+        <button class="sa-tab active" id="tabGov" data-i18n="sa.occ.tabGov">政府機構太空人（555 人）</button>
+        <button class="sa-tab"        id="tabCom" data-i18n="sa.occ.tabCom">商業 / 民間（93 人）</button>
+      </div>
+      <div class="sa-panel" id="panelGov">
+        <div class="sa-chart-card">
+          <div class="sa-chart-label" data-i18n="sa.occ.gov.label">政府機構太空人職業分布（共 555 人）</div>
+          <div class="sa-chart-wrap"><canvas id="chartGovOcc"></canvas></div>
+        </div>
+      </div>
+      <div class="sa-panel hidden" id="panelCom">
+        <div class="sa-chart-card">
+          <div class="sa-chart-label" data-i18n="sa.occ.com.label">商業 / 民間太空人職業分布（共 93 人）</div>
+          <div class="sa-chart-wrap"><canvas id="chartComOcc"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Engineer subtypes ─────────────────────────── -->
+  <section id="engineers" class="sa-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.eng.tag">工程師細分</span>
+        <h2 data-i18n="sa.eng.h2">工程師類型分析</h2>
+        <p data-i18n="sa.eng.p">政府與商業太空人中所有工程師背景者（共 140 人）的專業領域細分。</p>
+      </div>
+      <div class="sa-chart-card">
+        <div class="sa-chart-wrap sa-chart-md"><canvas id="chartEng"></canvas></div>
+      </div>
+      <div class="sa-note-box" data-i18n="sa.eng.note">
+        💡 航太工程師佔工程師類別近一半，反映了太空任務對飛行動力學、推進與系統整合專業的高度需求。
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Scientist subtypes ─────────────────────────── -->
+  <section id="scientists" class="sa-section alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.sci.tag">科學家細分</span>
+        <h2 data-i18n="sa.sci.h2">科學家 / 研究員類型分析</h2>
+        <p data-i18n="sa.sci.p">政府與商業太空人中所有科學研究背景者（共 103 人）的學科領域細分。</p>
+      </div>
+      <div class="sa-chart-card">
+        <div class="sa-chart-wrap sa-chart-md"><canvas id="chartSci"></canvas></div>
+      </div>
+      <div class="sa-note-box" data-i18n="sa.sci.note">
+        💡 物理學家與生物學家並列前二，反映國際太空站長期任務中微重力物理實驗與太空生物醫學研究的雙重需求。
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Nationality ────────────────────────────────── -->
+  <section id="nationality" class="sa-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.nat.tag">國籍統計</span>
+        <h2 data-i18n="sa.nat.h2">太空人國籍排名</h2>
+        <p data-i18n="sa.nat.p">47 個國家曾有公民進入太空，以下為前 10 大國家及其他合計。</p>
+      </div>
+      <div class="sa-two-col">
+        <div class="sa-chart-card" style="flex:1.4">
+          <div class="sa-chart-wrap"><canvas id="chartNat"></canvas></div>
+        </div>
+        <div class="sa-nat-panel">
+          <table class="sa-table">
+            <thead>
+              <tr>
+                <th data-i18n="sa.tbl.rank">排名</th>
+                <th data-i18n="sa.tbl.country">國家</th>
+                <th data-i18n="sa.tbl.count">人數</th>
+                <th data-i18n="sa.tbl.pct">佔比</th>
+              </tr>
+            </thead>
+            <tbody id="natTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Ethnicity ──────────────────────────────────── -->
+  <section id="ethnicity" class="sa-section alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sa.eth.tag">族裔分布</span>
+        <h2 data-i18n="sa.eth.h2">太空人族裔 / 人種分布</h2>
+        <p data-i18n="sa.eth.p">按族裔與人種背景分類（近似統計，部分人員具複合背景，以主要認同歸類）。</p>
+      </div>
+      <div class="sa-two-col reverse">
+        <div class="sa-eth-list" id="ethList"></div>
+        <div class="sa-chart-card" style="flex:1">
+          <div class="sa-chart-wrap sa-chart-donut"><canvas id="chartEth"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Taiwan Connection ──────────────────────────── -->
+  <section id="taiwan" class="sa-section sa-tw-section">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag" data-i18n="sa.tw.tag">台灣的連結</span>
+        <h2 data-i18n="sa.tw.h2">中華民國（台灣）與太空的連結</h2>
+        <p data-i18n="sa.tw.p">目前尚無持有中華民國（台灣）現行國籍者以太空人身分進入太空，但台灣與太空史之間早有深厚淵源。</p>
+      </div>
+
+      <!-- Status banner -->
+      <div class="sa-tw-banner">
+        <div class="sa-tw-banner-flag">🇹🇼</div>
+        <div>
+          <h3 data-i18n="sa.tw.banner.h3">中華民國籍太空人：目前 0 人</h3>
+          <p data-i18n="sa.tw.banner.p">截至 2025 年，尚無持有中華民國（台灣）現行國籍的人正式以太空人身分抵達 100 公里以上高空。台灣由國家太空中心（TASA）主導太空計畫，目前尚未啟動載人太空飛行計畫。</p>
+        </div>
+      </div>
+
+      <!-- Story cards -->
+      <div class="sa-tw-cards">
+
+        <div class="sa-tw-card featured">
+          <div class="sa-tw-card-badge primary" data-i18n="sa.tw.badge.wang">最具台灣淵源</div>
+          <div class="sa-tw-card-name">王贛駿 <span>Taylor Wang</span></div>
+          <div class="sa-tw-card-meta">
+            <span>🚀 STS-51-B &nbsp;·&nbsp; 1985 年 4 月</span>
+            <span>🇺🇸 美國籍（成長於台灣）</span>
+          </div>
+          <p data-i18n="sa.tw.wang.p">
+            生於中國昆明，幼年隨家人遷居台灣，就讀台南成功高中，後赴美取得博士學位。1985 年以 NASA 酬載專家身分搭乘挑戰者號太空梭執行 STS-51-B 任務，成為<strong>史上第一位進入太空的華裔人士</strong>。其成長背景與求學經歷（成功中學、台灣大學）使他被台灣廣泛視為代表性人物。
+          </p>
+        </div>
+
+        <div class="sa-tw-card">
+          <div class="sa-tw-card-badge secondary" data-i18n="sa.tw.badge.chiao">華裔美籍</div>
+          <div class="sa-tw-card-name">焦立中 <span>Leroy Chiao</span></div>
+          <div class="sa-tw-card-meta">
+            <span>🚀 STS-65・STS-92・STS-97・Expedition 10</span>
+            <span>🇺🇸 美國籍（中國裔）</span>
+          </div>
+          <p data-i18n="sa.tw.chiao.p">
+            生於美國密爾瓦基，父母來自中國。執行 4 次太空任務，並擔任 ISS 第 10 屆遠征隊指揮官（2004–2005），是<strong>首位擔任 ISS 指揮官的亞裔人士</strong>，也是首位以亞裔身分進行太空漫步的太空人（1996 年）。
+          </p>
+        </div>
+
+        <div class="sa-tw-card">
+          <div class="sa-tw-card-badge flag" data-i18n="sa.tw.badge.flag">旗幟之旅</div>
+          <div class="sa-tw-card-name" data-i18n="sa.tw.flag.title">中華民國國旗進入太空</div>
+          <div class="sa-tw-card-meta">
+            <span>🚀 Gemini VI &nbsp;·&nbsp; 1965 年 12 月</span>
+            <span>🇺🇸 Wally Schirra 攜帶</span>
+          </div>
+          <p data-i18n="sa.tw.flag.p">
+            1965 年 12 月，NASA 太空人 Wally Schirra 搭乘雙子星六號任務進入太空，並攜帶了中華民國國旗，那是<strong>中華民國國旗首次進入太空</strong>。冷戰時期美台關係的歷史見證，並附有 Schirra 親筆題詞。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ROC note -->
+      <div class="sa-tw-note">
+        <span class="sa-tw-note-icon">💡</span>
+        <div>
+          <strong data-i18n="sa.tw.note.h">台灣太空發展現況</strong>
+          <p data-i18n="sa.tw.note.p">台灣以衛星研發與遙測為主要太空計畫方向，TASA 已規劃多顆福爾摩沙衛星（FORMOSAT）任務。隨著全球商業太空旅行蓬勃發展，未來不排除有台灣公民以商業方式進入太空。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Sources ────────────────────────────────────── -->
+  <section class="sa-sources-section">
+    <div class="container">
+      <h4 data-i18n="sa.src.h4">資料來源 / Data Sources</h4>
+      <ul class="sa-sources-list">
+        <li><a href="https://www.worldspaceflight.com/bios/stats.php" target="_blank" rel="noopener">World Spaceflight – Astronaut/Cosmonaut Statistics</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_space_travelers_by_nationality" target="_blank" rel="noopener">Wikipedia – List of space travelers by nationality</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12894856/" target="_blank" rel="noopener">PMC – A demographic comparison of NASA astronauts and commercial spaceflight participants (2024)</a></li>
+        <li><a href="https://aerospace.csis.org/data/international-astronaut-database/" target="_blank" rel="noopener">Aerospace Security – International Astronaut Database</a></li>
+        <li><a href="https://taiwaninsight.org/2025/08/04/the-roc-flag-in-outer-space-astronaut-visits-during-the-cold-war-era-1960s-1980s/" target="_blank" rel="noopener">Taiwan Insight – The ROC Flag in Outer Space</a></li>
+      </ul>
+      <p class="sa-src-note" data-i18n="sa.src.note">所有數字均為近似統計，截至 2025 年 3 月。部分人員具複合職業背景，以最具代表性之主職歸類。All figures are approximate estimates as of March 2025.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-blue.png" alt="TIPSSE" class="footer-logo-img" />
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about"    data-i18n="nav.about">學會簡介</a>
+          <a href="index.html#projects" data-i18n="nav.projects">專案成果</a>
+          <a href="index.html#roadmap"  data-i18n="nav.roadmap2">發展藍圖</a>
+          <a href="mbse.html"           data-i18n="nav.mbse">MBSE 工具</a>
+          <a href="space-academy.html"  data-i18n="nav.academy">太空學堂</a>
+          <a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="space-academy.js"></script>
+</body>
+</html>
