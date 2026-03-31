@@ -113,7 +113,7 @@ const translations = {
   },
 
   en: {
-    'logo.sub':         'Taiwan Institute of Planetary Science and System Engineering',
+    'logo.sub':         '',
     'nav.about':        'About',
     'nav.projects':     'Projects',
     'nav.roadmap':      'Roadmap',
@@ -121,7 +121,7 @@ const translations = {
     'nav.contact':      'Contact',
     // Hero
     'hero.title':       'Explore the Universe,<br />Engineer the Future',
-    'hero.subtitle':    'Advancing interdisciplinary research in space science, planetary exploration, and system engineering — connecting Taiwan with the global academic community.',
+    'hero.subtitle':    'Advancing research in space science, planetary exploration,<br />and system engineering — bridging Taiwan and the world.',
     'hero.btn1':        'Learn More',
     'hero.btn2':        'View Roadmap',
     'hero.scroll':      'Scroll',
