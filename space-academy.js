@@ -9,6 +9,7 @@ Chart.register(ChartDataLabels);
 // ── i18n ─────────────────────────────────────────────
 const translations = {
   zh: {
+    'logo.sub':     '中華民國行星科學系統工程學會',
     'nav.about':    '學會簡介',
     'nav.projects': '專案成果',
     'nav.roadmap':  '發展路徑',
@@ -88,6 +89,7 @@ const translations = {
   },
 
   en: {
+    'logo.sub':     '',
     'nav.about':    'About',
     'nav.projects': 'Projects',
     'nav.roadmap':  'Roadmap',
