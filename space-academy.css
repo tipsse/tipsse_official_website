@@ -249,8 +249,9 @@
   vertical-align: middle;
 }
 .sa-table tr:last-child td { border-bottom: none; }
-.sa-table td.pct  { color: var(--accent); font-weight: 600; }
-.sa-table td.flag { font-size: 1.2rem; }
+.sa-table td.pct     { color: var(--accent); font-weight: 600; }
+.sa-table td.flag    { font-size: 1.2rem; }
+.sa-table td.country { white-space: nowrap; }
 
 .sa-rank-badge {
   display: inline-flex; align-items: center; justify-content: center;

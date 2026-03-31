@@ -384,7 +384,7 @@ function buildCharts() {
         },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 10 }, maxRotation: 45, minRotation: 45 } },
+        x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 10 }, maxRotation: 30 } },
         y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#64748b', font: { size: 11 } } },
       },
     },
@@ -434,7 +434,7 @@ function buildNatTable() {
       <tr>
         <td><span class="sa-rank-badge ${badgeCls}">${i + 1}</span></td>
         <td class="flag">${d.flag}</td>
-        <td>${currentLang === 'zh' ? d.zh : d.en}</td>
+        <td class="country">${currentLang === 'zh' ? d.zh : d.en}</td>
         <td>${d.count}</td>
         <td class="pct">${pct}%</td>
       </tr>`;
