@@ -35,7 +35,7 @@ const translations = {
     'stat.groups':      '專業分組',
     'stat.years':       '年以上歷史',
     'stat.intl':        '國際合作計畫',
-    'stat.members':     '會員遍及全台',
+    'stat.members':     '會員遍及全球',
     // Groups
     'groups.tag':       '組織架構',
     'groups.h2':        '四大專業分組',
@@ -141,7 +141,7 @@ const translations = {
     'stat.groups':      'Specialized Groups',
     'stat.years':       'Years of History',
     'stat.intl':        'International Projects',
-    'stat.members':     'Members Nationwide',
+    'stat.members':     'Members Worldwide',
     // Groups
     'groups.tag':       'Organization',
     'groups.h2':        'Four Specialized Groups',
@@ -316,10 +316,11 @@ document.querySelectorAll('[data-animate]').forEach(el => animObserver.observe(e
 // ── Counter animation ──
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
   const start  = performance.now();
   const update = (now) => {
     const p = Math.min((now - start) / 1800, 1);
-    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + suffix;
     if (p < 1) requestAnimationFrame(update);
   };
   requestAnimationFrame(update);
