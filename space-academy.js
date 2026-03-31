@@ -229,7 +229,7 @@ const sciTypes = [
 const nationalities = [
   { zh: '美國',           en: 'United States',   count: 355, flag: '🇺🇸', color: '#4f8ef7' },
   { zh: '俄羅斯 / 蘇聯',  en: 'Russia / USSR',   count: 130, flag: '🇷🇺', color: '#ef4444' },
-  { zh: '中國（中共）',   en: 'China (PRC)',      count:  24, flag: '🇨🇳', color: '#f97316' },
+  { zh: '中華人民共和國',   en: 'China (PRC)',      count:  24, flag: '🇨🇳', color: '#f97316' },
   { zh: '日本',           en: 'Japan',            count:  12, flag: '🇯🇵', color: '#f59e0b' },
   { zh: '德國',           en: 'Germany',          count:  11, flag: '🇩🇪', color: '#eab308' },
   { zh: '加拿大',         en: 'Canada',           count:  10, flag: '🇨🇦', color: '#84cc16' },
