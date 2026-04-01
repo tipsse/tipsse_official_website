@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>行事曆 | TIPSSE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="calendar.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-blue.png" alt="TIPSSE" class="nav-logo-img" />
+      </a>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about"    data-i18n="nav.about">學會簡介</a></li>
+        <li><a href="index.html#projects" data-i18n="nav.projects">專案成果</a></li>
+        <li><a href="index.html#roadmap"  data-i18n="nav.roadmap">發展藍圖</a></li>
+        <li><a href="mbse.html"           data-i18n="nav.mbse">MBSE 工具</a></li>
+        <li><a href="space-academy.html"  data-i18n="nav.academy">太空學堂</a></li>
+        <li><a href="calendar.html" class="nav-active" data-i18n="nav.calendar">行事曆</a></li>
+        <li><a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="cal-hero">
+    <div class="stars" id="stars"></div>
+    <div class="container">
+      <div class="cal-hero-inner" data-animate>
+        <span class="section-tag" data-i18n="cal.hero.tag">行事曆</span>
+        <h1 data-i18n="cal.hero.h1">中華民國行事曆</h1>
+        <p data-i18n="cal.hero.p">匯整國定假日、農曆傳統節日與補假日期，一覽重要節慶。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar -->
+  <section class="cal-main">
+    <div class="container">
+
+      <!-- Legend -->
+      <div class="cal-legend" data-animate>
+        <span class="cal-legend-title" data-i18n="cal.legend.title">圖例</span>
+        <span class="cal-legend-item">
+          <span class="cal-dot cal-dot-national"></span>
+          <span data-i18n="cal.legend.national">國定假日</span>
+        </span>
+        <span class="cal-legend-item">
+          <span class="cal-dot cal-dot-lunar"></span>
+          <span data-i18n="cal.legend.lunar">農曆節日</span>
+        </span>
+        <span class="cal-legend-item">
+          <span class="cal-dot cal-dot-substitute"></span>
+          <span data-i18n="cal.legend.substitute">補假</span>
+        </span>
+      </div>
+
+      <!-- Calendar widget -->
+      <div class="cal-widget" data-animate>
+
+        <!-- Month navigation -->
+        <div class="cal-nav">
+          <button class="cal-nav-btn" id="calPrev" aria-label="上個月">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="10 4 6 8 10 12"/>
+            </svg>
+          </button>
+          <div class="cal-nav-center">
+            <span class="cal-month-label" id="calMonthLabel">2026 年四月</span>
+            <button class="cal-today-btn" id="calToday" data-i18n="cal.today">今天</button>
+          </div>
+          <button class="cal-nav-btn" id="calNext" aria-label="下個月">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 4 10 8 6 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Weekday headers -->
+        <div class="cal-weekdays" id="calWeekdays"></div>
+
+        <!-- Day grid -->
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+
+      <!-- Event list for current month -->
+      <div class="cal-panel" data-animate>
+        <h3 class="cal-panel-title" data-i18n="cal.panel.title">本月節假日</h3>
+        <div class="cal-event-list" id="calEventList"></div>
+      </div>
+
+      <!-- Disclaimer note -->
+      <p class="cal-note" data-animate data-i18n="cal.note">
+        ＊農曆節日日期依各年曆書換算；補假日期以行政院公告為準，本頁資料僅供參考。
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-blue.png" alt="TIPSSE" class="footer-logo-img" />
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about"    data-i18n="nav.about">學會簡介</a>
+          <a href="index.html#projects" data-i18n="nav.projects">專案成果</a>
+          <a href="index.html#roadmap"  data-i18n="nav.roadmap">發展藍圖</a>
+          <a href="mbse.html"           data-i18n="nav.mbse">MBSE 工具</a>
+          <a href="space-academy.html"  data-i18n="nav.academy">太空學堂</a>
+          <a href="calendar.html"       data-i18n="nav.calendar">行事曆</a>
+          <a href="index.html#contact"  data-i18n="nav.contact">聯絡我們</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

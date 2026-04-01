@@ -13,7 +13,15 @@ const translations = {
     'nav.roadmap':      '發展藍圖',
     'nav.mbse':         'MBSE 工具',
     'nav.academy':      '太空學堂',
+    'nav.calendar':     '行事曆',
     'nav.contact':      '聯絡我們',
+    // Member Calendar section
+    'cal.section.tag':  '學會行事曆',
+    'cal.section.h2':   '行事曆',
+    'cal.section.p':    '學會活動與中華民國國定假日，登入會員後即可查看。',
+    'member.cal.lock':  '登入後查看學會行事曆',
+    'member.cal.title': '學會行事曆・中華民國國定假日',
+    'member.cal.note':  '藍色：TIPSSE 學會活動　綠色：中華民國國定假日　※ 日曆資料由 Google Calendar 提供',
     'nav.login':        '會員登入',
     // Hero
     'hero.title':       '探索宇宙，<br />工程未來',
@@ -146,7 +154,15 @@ const translations = {
     'nav.roadmap':      'Roadmap',
     'nav.mbse':         'MBSE Tool',
     'nav.academy':      'Space Academy',
+    'nav.calendar':     'Calendar',
     'nav.contact':      'Contact',
+    // Member Calendar section
+    'cal.section.tag':  'TIPSSE Calendar',
+    'cal.section.h2':   'Calendar',
+    'cal.section.p':    'TIPSSE events and ROC public holidays — visible after member login.',
+    'member.cal.lock':  'Log in to view the TIPSSE calendar',
+    'member.cal.title': 'TIPSSE Calendar · ROC Public Holidays',
+    'member.cal.note':  'Blue: TIPSSE events  Green: ROC public holidays  ※ Calendar data provided by Google Calendar',
     'nav.login':        'Member Login',
     // Hero
     'hero.title':       'Explore the Universe,<br />Engineer the Future',
@@ -571,6 +587,9 @@ async function renderMemberZone(zone) {
   if (locked)  locked.style.display = 'none';
   if (!content) return;
   content.classList.add('visible');
+
+  // Calendar zone: content is static HTML (Google Calendar embed), no DB ops needed
+  if (phKey === 'calendar') return;
 
   // Fetch from IndexedDB + static defaults
   const dbRecs    = await dbQuery(phKey);

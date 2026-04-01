@@ -16,6 +16,7 @@ const translations = {
     'nav.roadmap2': '發展藍圖',
     'nav.mbse':     'MBSE 工具',
     'nav.academy':  '太空學堂',
+    'nav.calendar': '行事曆',
     'nav.contact':  '聯絡我們',
     'footer.copy':  '© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.',
     // Hero
@@ -96,6 +97,7 @@ const translations = {
     'nav.roadmap2': 'Roadmap',
     'nav.mbse':     'MBSE Tool',
     'nav.academy':  'Space Academy',
+    'nav.calendar': 'Calendar',
     'nav.contact':  'Contact',
     'footer.copy':  '© 2024 Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.',
     // Hero
