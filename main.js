@@ -153,7 +153,7 @@ const translations = {
     'nav.projects':     'Projects',
     'nav.roadmap':      'Roadmap',
     'nav.mbse':         'MBSE Tool',
-    'nav.academy':      'Space Academy',
+    'nav.academy':      'Academy',
     'nav.calendar':     'Calendar',
     'nav.contact':      'Contact',
     // Member Calendar section
