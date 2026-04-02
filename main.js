@@ -271,7 +271,7 @@ const translations = {
     'footer.brand.cn': 'Republic of China',
     'footer.copy':     '© 2024 Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.',
     // Member auth
-    'nav.login':            'Member Login',
+    'nav.login':            'Login',
     'nav.logout':           'Log Out',
     'login.title':          'Members Area',
     'login.subtitle':       'Enter the member password to access exclusive content',
