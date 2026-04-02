@@ -204,7 +204,7 @@ section:nth-child(even) { background: var(--bg-2); }
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 22px;
   flex-wrap: nowrap;
 }
 .nav-links a {
