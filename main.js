@@ -8,6 +8,7 @@
 const translations = {
   zh: {
     'logo.sub':         '中華民國行星科學系統工程學會',
+    'nav.sub':          '中華民國行星科學系統工程學會',
     'nav.about':        '關於學會',
     'nav.projects':     '專案成果',
     'nav.roadmap':      '發展藍圖',
@@ -149,6 +150,7 @@ const translations = {
 
   en: {
     'logo.sub':         '',
+    'nav.sub':          'Taiwan Institute of Planetary Science · System Engineering',
     'nav.about':        'About',
     'nav.projects':     'Projects',
     'nav.roadmap':      'Roadmap',
@@ -166,7 +168,7 @@ const translations = {
     'nav.login':        'Member Login',
     // Hero
     'hero.title':       'Explore the Universe,<br />Engineer the Future',
-    'hero.subtitle':    'Advancing research in space science, planetary exploration,<br />and system engineering — bridging Taiwan and the world.',
+    'hero.subtitle':    'Advancing research in space science, planetary exploration, and system engineering — bridging Taiwan and the world.',
     'hero.btn1':        'Learn More',
     'hero.btn2':        'View Roadmap',
     'hero.scroll':      'Scroll',

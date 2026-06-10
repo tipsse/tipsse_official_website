@@ -3,10 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TIPSSE | 中華民國行星科學系統工程學會</title>
+  <title>TIPSSE 中華民國行星科學系統工程學會 | Taiwan Institute of Planetary Science &amp; System Engineering</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="TIPSSE（中華民國行星科學系統工程學會）為依法設立之非營利學術組織，推動太空科學、行星科學、系統工程（MBSE）研究，並主導 SSsat-1 衛星、RNX-71V 火箭發動機、GNSS-R 酬載等專案，連結台灣與國際太空科技社群。" />
+  <meta name="keywords" content="TIPSSE,中華民國行星科學系統工程學會,行星科學,系統工程,MBSE,太空科技,衛星,火箭,SSsat-1,RNX-71V,GNSS-R,Taiwan Institute of Planetary Science,Taiwan Space" />
+  <meta name="author" content="TIPSSE 中華民國行星科學系統工程學會" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://tipsse.space/" />
+  <link rel="alternate" hreflang="zh-TW" href="https://tipsse.space/" />
+  <link rel="alternate" hreflang="x-default" href="https://tipsse.space/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-icon.png" />
+  <link rel="apple-touch-icon" href="logo-icon.png" />
+
+  <!-- Open Graph (Facebook / LINE / 一般分享) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TIPSSE 中華民國行星科學系統工程學會" />
+  <meta property="og:title" content="TIPSSE 中華民國行星科學系統工程學會" />
+  <meta property="og:description" content="推動太空科學、行星科學與系統工程（MBSE）的台灣學術組織。SSsat-1 衛星、RNX-71V 火箭、GNSS-R 酬載等專案進行中。" />
+  <meta property="og:url" content="https://tipsse.space/" />
+  <meta property="og:image" content="https://tipsse.space/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TIPSSE 中華民國行星科學系統工程學會" />
+  <meta name="twitter:description" content="推動太空科學、行星科學與系統工程（MBSE）的台灣學術組織。" />
+  <meta name="twitter:image" content="https://tipsse.space/og-image.png" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#4f8ef7" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="calendar.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD: Organization 結構化資料（告訴 Google 你是個學術組織） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "中華民國行星科學系統工程學會",
+    "alternateName": [
+      "TIPSSE",
+      "Taiwan Institute of Planetary Science and System Engineering",
+      "Taiwan Institute of Planetary Science & System Engineering"
+    ],
+    "url": "https://tipsse.space/",
+    "logo": "https://tipsse.space/logo-blue.png",
+    "image": "https://tipsse.space/og-image.png",
+    "description": "TIPSSE 為依法設立之非營利學術組織，推動太空科學、行星科學、系統工程（MBSE）研究與國際合作。",
+    "foundingDate": "2019",
+    "areaServed": "TW",
+    "knowsAbout": [
+      "Planetary Science",
+      "System Engineering",
+      "MBSE",
+      "Satellite Design",
+      "Rocket Propulsion",
+      "GNSS-R",
+      "Space Education"
+    ],
+    "sameAs": [
+      "https://tipsse.space/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite + SiteNavigation（讓 Google 顯示 sitelinks 搜尋框） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TIPSSE 中華民國行星科學系統工程學會",
+    "url": "https://tipsse.space/",
+    "inLanguage": "zh-TW",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TIPSSE"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -16,8 +99,7 @@
       <a href="#hero" class="nav-logo">
         <img src="logo-icon.png" alt="TIPSSE" class="nav-logo-img" />
         <div class="nav-logo-text">
-          <span class="logo-abbr">TIPSSE</span>
-          <span class="logo-sub" data-i18n="logo.sub">中華民國行星科學系統工程學會</span>
+          <span class="logo-sub" data-i18n="nav.sub">中華民國行星科學系統工程學會</span>
         </div>
       </a>
       <div class="nav-right">
@@ -537,7 +619,7 @@
         <div class="contact-card">
           <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.8"/><ellipse cx="20" cy="20" rx="7" ry="15" stroke="currentColor" stroke-width="1.4"/><line x1="5" y1="20" x2="35" y2="20" stroke="currentColor" stroke-width="1.4"/><path d="M7 13 Q20 16 33 13" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M7 27 Q20 24 33 27" stroke="currentColor" stroke-width="1.2" fill="none"/></svg></div>
           <h4 data-i18n="contact.web.h4">官方網站</h4>
-          <a href="https://tipsse.org" target="_blank" rel="noopener">tipsse.org</a>
+          <a href="https://tipsse.space" target="_blank" rel="noopener">tipsse.space</a>
         </div>
         <div class="contact-card">
           <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="14" width="30" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M14 14 L14 10 Q14 7 17 7 L23 7 Q26 7 26 10 L26 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="5" y1="22" x2="35" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>

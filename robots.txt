@@ -1,0 +1,8 @@
+# robots.txt for TIPSSE 中華民國行星科學系統工程學會
+# https://tipsse.space/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tipsse.space/sitemap.xml
