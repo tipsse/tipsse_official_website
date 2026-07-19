@@ -10,7 +10,7 @@ const translations = {
     'nav.mbse': 'MBSE 工具', 'nav.academy': '太空學堂', 'nav.calendar': '行事曆',
     'nav.contact': '聯絡我們',
     'logo.sub': '中華民國行星科學系統工程學會',
-    'footer.copy': '© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.',
+    'footer.copy': `© 2021–${new Date().getFullYear()} 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.`,
     // Hero
     'cal.hero.tag': '行事曆',
     'cal.hero.h1': '中華民國行事曆',
@@ -38,7 +38,7 @@ const translations = {
     'nav.mbse': 'MBSE Tool', 'nav.academy': 'Space Academy', 'nav.calendar': 'Calendar',
     'nav.contact': 'Contact',
     'logo.sub': 'Taiwan Institute of Planetary Science and System Engineering',
-    'footer.copy': '© 2024 Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.',
+    'footer.copy': `© 2021–${new Date().getFullYear()} Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.`,
     // Hero
     'cal.hero.tag': 'Calendar',
     'cal.hero.h1': 'ROC Holiday Calendar',

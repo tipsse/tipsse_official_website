@@ -116,11 +116,10 @@ const translations = {
     // Contact
     'contact.tag': '聯絡我們', 'contact.h2': '加入我們的行列',
     'contact.p':   '無論你是研究者、工程師、學生，或是單純對太空充滿好奇，歡迎與我們聯繫。',
-    'contact.web.h4': '官方網站', 'contact.li.a': 'TIPSSE LinkedIn', 'contact.fb.a': 'TIPSSE 粉絲專頁',
     // Footer
     'footer.brand.p':  'Taiwan Institute of Planetary Science<br />and System Engineering',
     'footer.brand.cn': '中華民國行星科學系統工程學會',
-    'footer.copy':     '© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.',
+    'footer.copy':     `© 2021–${new Date().getFullYear()} 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.`,
     // Member auth
     'nav.login':            '會員登入',
     'nav.logout':           '登出',
@@ -267,11 +266,10 @@ const translations = {
     // Contact
     'contact.tag': 'Contact Us', 'contact.h2': 'Join Our Community',
     'contact.p':   'Whether you are a researcher, engineer, student, or simply curious about space — we welcome you to reach out.',
-    'contact.web.h4': 'Official Website', 'contact.li.a': 'TIPSSE on LinkedIn', 'contact.fb.a': 'TIPSSE Facebook Page',
     // Footer
     'footer.brand.p':  'Taiwan Institute of Planetary Science<br />and System Engineering',
     'footer.brand.cn': 'Republic of China',
-    'footer.copy':     '© 2024 Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.',
+    'footer.copy':     `© 2021–${new Date().getFullYear()} Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.`,
     // Member auth
     'nav.login':            'Login',
     'nav.logout':           'Log Out',

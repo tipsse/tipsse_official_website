@@ -616,26 +616,36 @@
         <p data-i18n="contact.p">無論你是研究者、工程師、學生，或是單純對太空充滿好奇，歡迎與我們聯繫。</p>
       </div>
       <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.8"/><ellipse cx="20" cy="20" rx="7" ry="15" stroke="currentColor" stroke-width="1.4"/><line x1="5" y1="20" x2="35" y2="20" stroke="currentColor" stroke-width="1.4"/><path d="M7 13 Q20 16 33 13" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M7 27 Q20 24 33 27" stroke="currentColor" stroke-width="1.2" fill="none"/></svg></div>
-          <h4 data-i18n="contact.web.h4">官方網站</h4>
-          <a href="https://tipsse.space" target="_blank" rel="noopener">tipsse.space</a>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="14" width="30" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M14 14 L14 10 Q14 7 17 7 L23 7 Q26 7 26 10 L26 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="5" y1="22" x2="35" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <h4>LinkedIn</h4>
-          <a href="#" target="_blank" rel="noopener" data-i18n="contact.li.a">TIPSSE LinkedIn</a>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="12" width="30" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="23" r="6" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="23" r="2.5" fill="currentColor"/><path d="M14 12 L16 8 L24 8 L26 12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="30" cy="17" r="1.5" fill="currentColor"/></svg></div>
-          <h4>Instagram</h4>
-          <a href="#" target="_blank" rel="noopener">@tipsse</a>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="14" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M4 32 C4 25 8 22 15 22 C22 22 26 25 26 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="28" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M28 22 C32 22 36 24 36 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <h4>Facebook</h4>
-          <a href="#" target="_blank" rel="noopener" data-i18n="contact.fb.a">TIPSSE 粉絲專頁</a>
-        </div>
+        <a class="contact-card" href="mailto:tipsse.contact@epchu.uk">
+          <span class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="9" width="30" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M5 12 L20 23 L35 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+          <span class="contact-text">
+            <span class="contact-label">Email</span>
+            <span class="contact-value is-email">tipsse.contact@epchu.uk</span>
+          </span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/company/tipsse/?viewAsMember=true" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="14" width="30" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M14 14 L14 10 Q14 7 17 7 L23 7 Q26 7 26 10 L26 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="5" y1="22" x2="35" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <span class="contact-text">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">TIPSSE</span>
+          </span>
+        </a>
+        <!-- 帳號尚未開通，暫時隱藏；補上 href 後取消註解即可恢復
+        <a class="contact-card" href="#" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="12" width="30" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="23" r="6" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="23" r="2.5" fill="currentColor"/><path d="M14 12 L16 8 L24 8 L26 12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="30" cy="17" r="1.5" fill="currentColor"/></svg></span>
+          <span class="contact-text">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@tipsse</span>
+          </span>
+        </a>
+        <a class="contact-card" href="#" target="_blank" rel="noopener">
+          <span class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="14" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M4 32 C4 25 8 22 15 22 C22 22 26 25 26 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="28" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M28 22 C32 22 36 24 36 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="contact-text">
+            <span class="contact-label">Facebook</span>
+            <span class="contact-value">TIPSSE</span>
+          </span>
+        </a>
+        -->
       </div>
     </div>
   </section>
@@ -658,7 +668,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p data-i18n="footer.copy">© 2024 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2021–2026 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.</p>
       </div>
     </div>
   </footer>
