@@ -1,0 +1,8 @@
+node_modules/
+.events-queue.json
+.social-queue.json
+.env
+.env.local
+*.secret.json
+service-account*.json
+.DS_Store
