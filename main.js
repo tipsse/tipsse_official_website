@@ -10,15 +10,6 @@ const translations = {
     ...COMMON_I18N.zh,
     'logo.sub':         '中華民國行星科學系統工程學會',
     'nav.sub':          '中華民國行星科學系統工程學會',
-    'nav.news':         '太空新聞',
-    // News section
-    'news.tag':         '太空新聞',
-    'news.h2':          '每日太空動態',
-    'news.p':           '每日自動彙整 NASA、ESA、SpaceNews、JAXA 等機構的最新消息，並透過 AI 摘要為中文重點。',
-    'news.updated':     '最後更新',
-    'news.filter.all':  '全部',
-    'news.empty':       '新聞尚未生成，請稍後再回來。',
-    'news.disclaimer':  '部分示意圖為 AI 自動生成之品牌卡片，非新聞原始畫面。新聞內容之著作權屬各原始媒體。',
     // Member Calendar section
     'cal.section.tag':  '學會行事曆',
     'cal.section.h2':   '行事曆',
@@ -138,16 +129,7 @@ const translations = {
     ...COMMON_I18N.en,
     'logo.sub':         '',
     'nav.sub':          'Taiwan Institute of Planetary Science · System Engineering',
-    'nav.news':         'Space News',
     'nav.academy':      'Academy',   // 首頁沿用舊字樣，其餘頁面為 'Space Academy'（待統一）
-    // News section
-    'news.tag':         'Space News',
-    'news.h2':          'Daily Space Digest',
-    'news.p':           'Automated daily digest from NASA, ESA, SpaceNews and JAXA, with AI-generated summaries in traditional Chinese.',
-    'news.updated':     'Last updated',
-    'news.filter.all':  'All',
-    'news.empty':       'No news yet — please check back later.',
-    'news.disclaimer':  'Some card visuals are AI-generated branded illustrations, not original news imagery. All news copyright belongs to the original outlets.',
     // Member Calendar section
     'cal.section.tag':  'TIPSSE Calendar',
     'cal.section.h2':   'Calendar',
@@ -440,139 +422,3 @@ applyLang(currentLang);
 // ══════════════════════════════════════════════════════════════════════
 
 
-// ══════════════════════════════════
-// News aggregation renderer
-// ══════════════════════════════════
-(function initNews() {
-  const grid       = document.getElementById('newsGrid');
-  const emptyEl    = document.getElementById('newsEmpty');
-  const updatedEl  = document.getElementById('newsUpdatedAt');
-  const filterBar  = document.getElementById('newsFilters');
-  if (!grid) return;
-
-  const SOURCE_COLORS = {
-    NASA:      ['#0b3d91', '#fc3d21'],
-    ESA:       ['#003247', '#0068b3'],
-    SpaceNews: ['#1a1a2e', '#e94560'],
-    JAXA:      ['#003876', '#c8102e'],
-    TASA:      ['#004b87', '#00a3e0'],
-    default:   ['#161d2e', '#4f8ef7'],
-  };
-
-  function svgPlaceholder(item) {
-    const [c1, c2] = SOURCE_COLORS[item.source] || SOURCE_COLORS.default;
-    const t = (item.title || '').slice(0, 46);
-    const stars = Array.from({ length: 30 }, () => {
-      const x = Math.random() * 400, y = Math.random() * 225, r = Math.random() * 1.2 + 0.3;
-      const o = (Math.random() * 0.7 + 0.3).toFixed(2);
-      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(2)}" fill="#fff" opacity="${o}"/>`;
-    }).join('');
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/>
-        </linearGradient>
-        <radialGradient id="glow" cx="0.75" cy="0.25" r="0.6">
-          <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
-          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <rect width="400" height="225" fill="url(#g)"/>
-      <rect width="400" height="225" fill="url(#glow)"/>
-      ${stars}
-      <text x="20" y="205" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#fff" opacity="0.9" letter-spacing="1.5">${item.source || 'SPACE'}</text>
-      <text x="20" y="30"  font-family="Inter, sans-serif" font-size="9" fill="#fff" opacity="0.6" letter-spacing="2">TIPSSE · SPACE NEWS</text>
-    </svg>`;
-  }
-
-  function fmtDate(iso) {
-    if (!iso) return '';
-    const d = new Date(iso);
-    if (isNaN(d)) return '';
-    return d.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
-  }
-  function fmtEventDate(iso) {
-    if (!iso) return '';
-    const d = new Date(iso);
-    if (isNaN(d)) return '';
-    return d.toLocaleDateString('zh-TW', { month: '2-digit', day: '2-digit' });
-  }
-  function esc(s) {
-    return String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
-  }
-
-  function renderCard(item) {
-    const media = item.image
-      ? `<img src="${esc(item.image)}" alt="${esc(item.title)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{innerHTML:this.dataset.fallback}).firstChild)" data-fallback="${esc(svgPlaceholder(item))}"/>`
-      : svgPlaceholder(item);
-    const aiBadge = (!item.image || item.image_ai_generated)
-      ? `<span class="news-ai-badge">AI illustration</span>` : '';
-    const eventChip = item.event
-      ? `<span class="news-card-event" title="${esc(item.event.title)} · ${esc(item.event.location || '')}">
-           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="1.5" y="2.5" width="9" height="8" rx="1"/><path d="M1.5 5h9M4 1v2M8 1v2"/></svg>
-           ${esc(fmtEventDate(item.event.datetime))}
-         </span>`
-      : '';
-    const permalink = `news/${encodeURIComponent(item.id)}.html`;
-    return `
-      <a class="news-card" href="${permalink}" data-source="${esc(item.source)}">
-        <div class="news-card-image">
-          ${media}
-          ${aiBadge}
-        </div>
-        <div class="news-card-body">
-          <div class="news-card-meta">
-            <span class="news-card-source">${esc(item.source)}</span>
-            <span class="news-card-date">${esc(fmtDate(item.published_at))}</span>
-          </div>
-          <h3>${esc(item.title)}</h3>
-          <p>${esc(item.summary)}</p>
-          <div class="news-card-footer">
-            <span class="news-card-link">
-              閱讀全文
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 6h7M6 2.5L9.5 6 6 9.5"/></svg>
-            </span>
-            ${eventChip}
-          </div>
-        </div>
-      </a>`;
-  }
-
-  let currentFilter = 'all';
-  let allItems = [];
-
-  function render() {
-    const items = currentFilter === 'all'
-      ? allItems
-      : allItems.filter(i => i.source === currentFilter);
-    if (items.length === 0) {
-      grid.innerHTML = '';
-      emptyEl.hidden = false;
-    } else {
-      emptyEl.hidden = true;
-      grid.innerHTML = items.map(renderCard).join('');
-    }
-  }
-
-  filterBar?.addEventListener('click', e => {
-    const btn = e.target.closest('.news-filter');
-    if (!btn) return;
-    filterBar.querySelectorAll('.news-filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentFilter = btn.dataset.source;
-    render();
-  });
-
-  fetch('news.json', { cache: 'no-cache' })
-    .then(r => r.ok ? r.json() : Promise.reject(r.status))
-    .then(data => {
-      allItems = Array.isArray(data.items) ? data.items : [];
-      if (data.generated_at && updatedEl) {
-        const d = new Date(data.generated_at);
-        updatedEl.textContent = isNaN(d) ? data.generated_at
-          : d.toLocaleString('zh-TW', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
-      }
-      render();
-    })
-    .catch(() => { emptyEl.hidden = false; });
-})();

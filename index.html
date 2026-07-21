@@ -112,7 +112,6 @@
         <li><a href="#about"    data-i18n="nav.about">關於學會</a></li>
         <li><a href="#projects" data-i18n="nav.projects">專案成果</a></li>
         <li><a href="#roadmap"  data-i18n="nav.roadmap">發展藍圖</a></li>
-        <li><a href="#news"              data-i18n="nav.news">太空新聞</a></li>
         <li><a href="mbse.html"          data-i18n="nav.mbse">MBSE 工具</a></li>
         <li><a href="space-academy.html" data-i18n="nav.academy">太空學堂</a></li>
         <li><a href="#contact"           data-i18n="nav.contact">聯絡我們</a></li>
@@ -434,37 +433,6 @@
     </div>
   </section>
 
-  <!-- News (auto-aggregated) -->
-  <section id="news">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-i18n="news.tag">太空新聞</span>
-        <h2 data-i18n="news.h2">每日太空動態</h2>
-        <p data-i18n="news.p">每日自動彙整 NASA、ESA、SpaceNews、JAXA、TASA 等機構的最新消息，並透過 AI 摘要為中文重點。</p>
-      </div>
-
-      <div class="news-toolbar">
-        <div class="news-updated">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>
-          <span data-i18n="news.updated">最後更新</span>：<span id="newsUpdatedAt">—</span>
-        </div>
-        <div class="news-filters" id="newsFilters">
-          <button class="news-filter active" data-source="all" data-i18n="news.filter.all">全部</button>
-          <button class="news-filter" data-source="NASA">NASA</button>
-          <button class="news-filter" data-source="ESA">ESA</button>
-          <button class="news-filter" data-source="SpaceNews">SpaceNews</button>
-          <button class="news-filter" data-source="JAXA">JAXA</button>
-        </div>
-      </div>
-
-      <div class="news-grid" id="newsGrid">
-        <!-- 由 main.js 從 news.json 動態渲染 -->
-      </div>
-
-      <p class="news-empty" id="newsEmpty" hidden data-i18n="news.empty">新聞尚未生成，請稍後再回來。</p>
-      <p class="news-disclaimer" data-i18n="news.disclaimer">部分示意圖為 AI 自動生成之品牌卡片，非新聞原始畫面。新聞內容之著作權屬各原始媒體。</p>
-    </div>
-  </section>
 
   <!-- Events -->
   <section id="events">
