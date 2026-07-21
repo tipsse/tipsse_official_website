@@ -1,0 +1,51 @@
+<!-- ══════════════════════════════════════════════════════════════════════
+     會員專區 — 藍圖階段區塊樣板（暫停開發 / Dormant）
+     ══════════════════════════════════════════════════════════════════════
+     此檔案不被任何頁面載入，僅保存原始標記供日後接後端時還原。
+
+     原用法：貼在 index.html 發展藍圖每個 .phase-content 的結尾，五個階段各
+     一份，data-phase 依序為 ph1 ~ ph5。JS 以 data-phase 為鍵讀寫該階段的
+     照片與會議記錄。
+
+     停用原因與日後接後端的作法見 member.js 開頭說明；樣式見 member.css。
+     ══════════════════════════════════════════════════════════════════════ -->
+
+            <div class="member-zone" data-phase="ph1">
+              <div class="member-zone-locked" role="button" tabindex="0">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="7.5" width="10" height="7.5" rx="1.5"/><path d="M5.5 7.5V5a2.5 2.5 0 0 1 5 0v2.5"/></svg>
+                <span data-i18n="member.login.hint">登入後查看活動照片與會議記錄</span>
+              </div>
+              <div class="member-zone-content">
+                <div class="member-zone-header">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="4" width="14" height="11" rx="1.5"/><circle cx="6" cy="9.5" r="2"/><path d="M10 8h3M10 11h2"/></svg>
+                  <span data-i18n="member.zone.title">會員專區 · 活動照片 &amp; 會議記錄</span>
+                </div>
+              </div>
+            </div>
+
+
+<!-- ── 登入 Modal 與照片燈箱（原置於 index.html 頁尾 </footer> 之後）── -->
+
+  <!-- Login Modal -->
+  <div class="login-overlay" id="loginOverlay" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="login-modal">
+      <button class="login-modal-close" id="loginClose" aria-label="關閉">×</button>
+      <div class="login-modal-icon">
+        <img src="logo-icon.png" alt="TIPSSE" class="login-modal-logo" />
+      </div>
+      <h3 id="loginTitle" data-i18n="login.title">會員專區</h3>
+      <p class="login-subtitle" data-i18n="login.subtitle">請輸入會員密碼以查看專屬內容</p>
+      <div class="login-input-row">
+        <input type="password" class="login-input" id="loginPassword" data-i18n-placeholder="login.placeholder" placeholder="會員密碼" autocomplete="current-password" />
+        <button class="login-submit" id="loginSubmit" data-i18n="login.btn">登入</button>
+      </div>
+      <p class="login-error" id="loginError"></p>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox">
+    <img id="lightboxImg" src="" alt="" />
+    <p class="photo-lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
