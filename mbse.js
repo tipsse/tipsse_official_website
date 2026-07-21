@@ -5,10 +5,8 @@
 // ── i18n (reuse same translations + MBSE-specific keys) ──
 const translations = {
   zh: {
-    'nav.about': '學會簡介', 'nav.groups': '專業分組', 'nav.projects': '專案成果',
-    'nav.roadmap': '發展路徑', 'nav.roadmap2': '發展藍圖',
-    'nav.events': '近期活動', 'nav.contact': '聯絡我們', 'nav.mbse': 'MBSE 工具', 'nav.academy': '太空學堂', 'nav.calendar': '行事曆',
-    'footer.copy': `© 2021–${new Date().getFullYear()} 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.`,
+    ...COMMON_I18N.zh,
+    'nav.groups': '專業分組', 'nav.events': '近期活動',
     // Hero
     'mbse.hero.tag':  '線上工具',
     'mbse.hero.h1':   'MBSE 線上建模平台',
@@ -70,10 +68,8 @@ const translations = {
   },
 
   en: {
-    'nav.about': 'About', 'nav.groups': 'Groups', 'nav.projects': 'Projects',
-    'nav.roadmap': 'Roadmap', 'nav.roadmap2': 'Roadmap',
-    'nav.events': 'Events', 'nav.contact': 'Contact', 'nav.mbse': 'MBSE Tool', 'nav.academy': 'Space Academy', 'nav.calendar': 'Calendar',
-    'footer.copy': `© 2021–${new Date().getFullYear()} Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.`,
+    ...COMMON_I18N.en,
+    'nav.groups': 'Groups', 'nav.events': 'Events',
     // Hero
     'mbse.hero.tag':  'Online Tool',
     'mbse.hero.h1':   'MBSE Online Modeling Platform',

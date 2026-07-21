@@ -9,17 +9,9 @@ Chart.register(ChartDataLabels);
 // ── i18n ─────────────────────────────────────────────
 const translations = {
   zh: {
+    ...COMMON_I18N.zh,
     'logo.sub':     '中華民國行星科學系統工程學會',
     'nav.sub':      '中華民國行星科學系統工程學會',
-    'nav.about':    '學會簡介',
-    'nav.projects': '專案成果',
-    'nav.roadmap':  '發展路徑',
-    'nav.roadmap2': '發展藍圖',
-    'nav.mbse':     'MBSE 工具',
-    'nav.academy':  '太空學堂',
-    'nav.calendar': '行事曆',
-    'nav.contact':  '聯絡我們',
-    'footer.copy':  `© 2021–${new Date().getFullYear()} 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.`,
     // Hero
     'sa.hero.tag':  '知識科普',
     'sa.hero.h1':   '太空知識小學堂',
@@ -91,17 +83,9 @@ const translations = {
   },
 
   en: {
+    ...COMMON_I18N.en,
     'logo.sub':     '',
     'nav.sub':      'Taiwan Institute of Planetary Science · System Engineering',
-    'nav.about':    'About',
-    'nav.projects': 'Projects',
-    'nav.roadmap':  'Roadmap',
-    'nav.roadmap2': 'Roadmap',
-    'nav.mbse':     'MBSE Tool',
-    'nav.academy':  'Space Academy',
-    'nav.calendar': 'Calendar',
-    'nav.contact':  'Contact',
-    'footer.copy':  `© 2021–${new Date().getFullYear()} Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.`,
     // Hero
     'sa.hero.tag':  'Knowledge',
     'sa.hero.h1':   'Space Knowledge Academy',

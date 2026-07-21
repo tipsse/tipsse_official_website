@@ -6,11 +6,8 @@
 // ── i18n ──
 const translations = {
   zh: {
-    'nav.about': '學會簡介', 'nav.projects': '專案成果', 'nav.roadmap': '發展藍圖',
-    'nav.mbse': 'MBSE 工具', 'nav.academy': '太空學堂', 'nav.calendar': '行事曆',
-    'nav.contact': '聯絡我們',
+    ...COMMON_I18N.zh,
     'logo.sub': '中華民國行星科學系統工程學會',
-    'footer.copy': `© 2021–${new Date().getFullYear()} 中華民國行星科學系統工程學會 TIPSSE. All rights reserved.`,
     // Hero
     'cal.hero.tag': '行事曆',
     'cal.hero.h1': '中華民國行事曆',
@@ -34,11 +31,8 @@ const translations = {
     'cal.note': '＊農曆節日日期依各年曆書換算；補假日期以行政院公告為準，本頁資料僅供參考。',
   },
   en: {
-    'nav.about': 'About', 'nav.projects': 'Projects', 'nav.roadmap': 'Roadmap',
-    'nav.mbse': 'MBSE Tool', 'nav.academy': 'Space Academy', 'nav.calendar': 'Calendar',
-    'nav.contact': 'Contact',
+    ...COMMON_I18N.en,
     'logo.sub': 'Taiwan Institute of Planetary Science and System Engineering',
-    'footer.copy': `© 2021–${new Date().getFullYear()} Taiwan Institute of Planetary Science and System Engineering (TIPSSE). All rights reserved.`,
     // Hero
     'cal.hero.tag': 'Calendar',
     'cal.hero.h1': 'ROC Holiday Calendar',
