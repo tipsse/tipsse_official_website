@@ -1,0 +1,72 @@
+name: Daily Space News Aggregation
+
+on:
+  schedule:
+    # Runs at 00:00 UTC daily = 08:00 Taipei
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without calling Claude / Google Calendar'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # needed to commit news.json back
+
+concurrency:
+  group: news-aggregation
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Aggregate news (RSS + Claude summary + event extraction)
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          MAX_ITEMS: '15'
+          PER_SOURCE_LIMIT: '3'
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ] || [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "▶ Running in DRY-RUN mode (no Claude)"
+            node scripts/aggregate-news.mjs --dry-run
+          else
+            node scripts/aggregate-news.mjs
+          fi
+
+      - name: Push extracted events to Google Calendar
+        if: inputs.dry_run != true
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          TIPSSE_CALENDAR_ID: ${{ secrets.TIPSSE_CALENDAR_ID }}
+        run: |
+          if [ -f .events-queue.json ] && [ -n "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            node scripts/sync-calendar.mjs
+          else
+            echo "ℹ Skipping calendar sync (no queue or no credentials)"
+          fi
+
+      - name: Commit updated news.json
+        run: |
+          if git diff --quiet news.json 2>/dev/null; then
+            echo "ℹ No changes to news.json — nothing to commit."
+          else
+            git config user.name  "tipsse-news-bot"
+            git config user.email "tipsse-news-bot@users.noreply.github.com"
+            git add news.json
+            git commit -m "chore(news): daily aggregation $(date -u +%Y-%m-%d)"
+            git push
+          fi
